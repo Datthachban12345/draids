@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <!-- Demo styles -->
+  <style>
+    @media screen and (max-width:1279px) { 
+        .container {
+            max-width: 100%;
+            padding-right:15px;
+            padding-left: 15px;
+    }
+    }
+
+  </style>
+</head>
+<body class="bg-black overflow-x-hidden">
+<div class="app ">
+    <header class="header fixed w-full z-50">
+        <div class="container text-white flex items-center m-auto">
+                <a class="header_menu-bar text-4xl mr-5 static xl:hidden">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </a>
+            <div class="over-lay"></div>
+            <a href="" title="Trợ lí nhân tạo trong chuẩn đoán hình ảnh" class="h-logo">
+                <img src="img/logo.webp" alt="" class="">
+            </a>
+            <div href="" class="menu flex-1">
+                <a class="xl:hidden h-logo">
+                    <img src="img/logo.webp" alt="" class="">
+                </a>
+                <ul class="header-title flex xl:justify-center flex-col xl:flex-row">
+                    <li class="header-title-withMe flex flex-col xl:flex-row xl:items-center xl:pr-5 xl:mr-8">
+                        <a href="" class="">Về chúng tôi</a>
+                        <span class="btn-header-title"><i class="fa-solid fa-caret-down"></i></span>
+                        <ul class="">
+                            <li class="">
+                                <a href="" >Công ti Vinbrain</a>
+                            </li>
+                            <li class="">
+                                <a href="" class="">Đội ngũ tài năng</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-title-chuan-doan flex flex-col xl:flex-row xl:items-center xl:pr-5 xl:mr-8">
+                        <a href="" class="">AI chuẩn đoán hình ảnh</a>
+                        <span class="btn-header-title"><i class="fa-solid fa-caret-down"></i></span>
+                        <ul class="">
+                            <li class="">
+                                <a href="" class="">Tầm soát tổng thể</a>
+                                <ul class="">
+                                    <li class="">
+                                        <a href="" class="">X quang ngực</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="" class="">CT ngực</a>
+                                    </li>
+                                </ul>
+                                <span class="btn-header-title pr-5"><i class="fa-solid fa-caret-right"></i></span>
+                            </li>
+                            <li class="">
+                                <a href="" class="">Chuẩn đoán & điều trị ung thư</a>
+                                <ul class="">
+                                    <li class="">
+                                        <a href="" class="">Ung thư gan</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="" class="">Ung thư trực tràng</a>
+                                    </li>
+                                </ul>
+                                <span class="btn-header-title pr-5"><i class="fa-solid fa-caret-right"></i></span>
+                            </li>
+                            <li class="">
+                                <a href="" class="">Sàng lọc bệnh thế kỉ</a>
+                                <ul class="">
+                                    <li class="">
+                                        <a href="" class="">Lao phổi</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="" class="">Tan máu bẩm sinh</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="" class="">Covid 19</a>
+                                    </li>
+                                </ul>
+                                <span class="btn-header-title pr-5"><i class="fa-solid fa-caret-right"></i></span>
+                            </li>
+    
+                        </ul>
+                    </li>
+                    <li class=" flex xl:items-center flex-col xl:flex-row xl:pr-5 xl:mr-8">
+                        <a href="" class="">AI cho quản lí dữ liệu y tế</a>
+                        <span class="btn-header-title"><i class="fa-solid fa-caret-down"></i></span>
+                        <ul class="">
+                            <li class="">
+                                <a href="" class="">Data solution</a>
+                                <span class="btn-header-title pr-5"><i class="fa-solid fa-caret-right"></i></span>
+                                <ul class="">
+                                    <li class="">
+                                        <a href="" class="">Tự động báo cáo thông minh</a>
+                                    </li>
+                                    <li class=""><a href="" class="">Phân tích hồ sơ y tế thông minh</a></li>
+                                    <li class=""><a href="" class="">Quản lí bệnh viện và phân tích dự báo</a></li>
+                                    <li class=""><a href="" class="">Quản trị dữ liệu và hệ thống tri thức</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" flex xl:items-center flex-col xl:flex-row xl:pr-5 xl:mr-8">
+                        <a href="" class="">Tài nguyên</a>
+                        <span class="btn-header-title"><i class="fa-solid fa-caret-down"></i></span>
+                        <ul class="">
+                            <li class="">
+                                <a href="" class="">Tài liệu</a>
+                            </li>
+                            <li class=""><a href="" class="">Tin tức & sự kiện</a></li>
+                            <li class=""><a href="" class="">Tài nguyên Vinbrain</a></li>
+                        </ul>
+                    </li>
+                    <li class=" flex xl:items-center items- flex-col xl:flex-row xl:pr-5 xl:mr-8">
+                        <a href="" class="">Dùng thử</a>
+                        <span class="btn-header-title"><i class="fa-solid fa-caret-down"></i></span>
+                        <ul class="">
+                            <li class="">
+                                <a href="" class="">X-quang ngực</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header-icon flex items-center ml-auto">
+                <div class="header-icon-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                
+                <a href="" class="btn font-semibold text-white py-3 px-6 rounded-3xl border-white hover:bg-white hover:text-green-600">Liên hệ</a>
+            </div>
+        </div>
+    </header>
+    <section class="slide-banner pt-24">
+        <div class="swiper mySwiper mySwipers">
+            <div class="swiper-wrapper" style="height:fit-content;">
+                <div class="swiper-slide bg-no-repeat bg-right" style="background-image: url('img/bg-slide.jpg'); width: 1913px; margin-right: 8px;">
+                    <div class="container flex items-center h-full m-auto">
+                        <div class="mb-4 xl:mb-0 slide-1-1">
+                            <p class="subtitle before:h-[2px] flex items-center font-semibold uppercase mb-2 2xl:text-[1rem] sm:text-sm text-xs">Tính năng mới</p>
+                            <p class="title-all text-white font-medium 2xl:text-5xl xl:text-2xl text-xl 2xl:mb-4 mb-2">Ra mắt tính năng phân loại tổn thương theo chuẩn LI-RADS trên DrAid™ CT Ung Thư Gan</p>
+                            <div class="mb-4 text-white short_content 2xl:mb-10">
+                                Nâng cao hiệu quả chẩn đoán, điều trị Ung thư gan qua công nghệ AI &nbsp
+                            </div>
+                            <div class="father-button relative inline-flex">
+                                <a href="" class=" btn-all btn"> <span class="text-button">Tìm hiểu ngay</span></a>
+                                <a href="" class="btn-all2 btn"><span class="text-button">Tìm hiểu ngay</span></a>
+                            </div>
+                            
+                        </div>
+                        <div class="slide-1-2">
+                            <div class="relative banner-image">
+                                <img src="img/draidweb-1.webp" alt="" class="">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                <div class="swiper-slide">
+                    <video autoplay="" muted="" playsinline="" class=" object-cover w-full h-auto pointer-events-none absolute video-lazy" data-src="https://draid.ai/public/uploads/1tin-tuc-anh/13s-draidedit.mp4"><source src="https://draid.ai/public/uploads/1tin-tuc-anh/13s-draidedit.mp4" type="video/mp4">
+                    Your browser does not support the video tag.</video>
+              </div>
+
+
+            </div>
+            <div class="swiper-button-next button-next-dat rounded-full z-20"></div>
+            <div class="swiper-button-prev button-prev-dat rounded-full z-20"></div>
+          </div>
+    </section>
+    <section class="introduce pt-10 pb-6 2xl:pt-20 2xl:pb-10">
+        <div class="container m-auto">
+            <p class="flex justify-center items-center font-semibold uppercase text-gray-400">Giới thiệu</p>
+            <div class="module-introduce 2xl:p-14 p-6">
+                <div class="module-parent text-center flex justify-center ">
+                    <button class="module-child active">
+                        <p class="">Về VinBrain</p>
+                    </button>
+                    <button class="module-child">
+                        <p class="">Thúc đẩy Chuẩn đoán hình ảnh từ xa</p>
+                    </button>
+                    <button class="module-child">
+                        <p class="">Chăm sóc Sức khỏe toàn diện</p>
+                    </button>
+                    <button class="module-child">
+                        <p class="">Kết quả đã được chứng minh</p>
+                    </button>
+                    <button class="module-child">
+                        <p class="">Hợp tác toàn cầu</p>
+                    </button>
+                    <button class="module-child">
+                        <p class="">Tầm nhìn cho tương lai</p>
+                    </button>
+
+                </div>
+                <div class="module-infor flex items-center ">
+                    <div class=" text-white">
+                        <p class="font-bold text-3xl mb-5">Về VinBrainz</p>
+                        <p class="mb-3">Tính tới năm 2023, có tới 2/3 dân số thế giới vẫn chưa được tiếp xúc đầy đủ với chẩn đoán hình ảnh. VinBrain đang nỗ lực để thay đổi điều đó với sứ mệnh rõ ràng: Cải thiện cuộc sống cho mọi người thông qua ứng dụng Trí tuệ nhân tạo (AI) và Internet vạn vật (IoT) vào Y tế. DrAid™ AI, nền tảng công nghệ cốt lõi của chúng tôi, đóng vai trò quan trọng trong trong sứ mệnh này.</p>
+                    </div>
+                    <div class="">
+                        <img src="img/1.webp" alt="" class="">
+                    </div>
+
+                </div>
+                <div class="module-infor hidden items-center ">
+                    <div class=" text-white">
+                        <p class="font-bold text-3xl mb-5">Về VinBrainzz</p>
+                        <p class="mb-3">Tính tới năm 2023, có tới 2/3 dân số thế giới vẫn chưa được tiếp xúc đầy đủ với chẩn đoán hình ảnh. VinBrain đang nỗ lực để thay đổi điều đó với sứ mệnh rõ ràng: Cải thiện cuộc sống cho mọi người thông qua ứng dụng Trí tuệ nhân tạo (AI) và Internet vạn vật (IoT) vào Y tế. DrAid™ AI, nền tảng công nghệ cốt lõi của chúng tôi, đóng vai trò quan trọng trong trong sứ mệnh này.</p>
+                    </div>
+                    <div class="">
+                        <img src="img/1.webp" alt="" class="">
+                    </div>
+
+                </div>
+                <div class="module-infor hidden items-center ">
+                    <div class=" text-white">
+                        <p class="font-bold text-3xl mb-5">Về VinBrainzzz</p>
+                        <p class="mb-3">Tính tới năm 2023, có tới 2/3 dân số thế giới vẫn chưa được tiếp xúc đầy đủ với chẩn đoán hình ảnh. VinBrain đang nỗ lực để thay đổi điều đó với sứ mệnh rõ ràng: Cải thiện cuộc sống cho mọi người thông qua ứng dụng Trí tuệ nhân tạo (AI) và Internet vạn vật (IoT) vào Y tế. DrAid™ AI, nền tảng công nghệ cốt lõi của chúng tôi, đóng vai trò quan trọng trong trong sứ mệnh này.</p>
+                    </div>
+                    <div class="">
+                        <img src="img/1.webp" alt="" class="">
+                    </div>
+
+                </div>
+                <div class="module-infor hidden items-center ">
+                    <div class=" text-white">
+                        <p class="font-bold text-3xl mb-5">Về VinBrainzzzzz</p>
+                        <p class="mb-3">Tính tới năm 2023, có tới 2/3 dân số thế giới vẫn chưa được tiếp xúc đầy đủ với chẩn đoán hình ảnh. VinBrain đang nỗ lực để thay đổi điều đó với sứ mệnh rõ ràng: Cải thiện cuộc sống cho mọi người thông qua ứng dụng Trí tuệ nhân tạo (AI) và Internet vạn vật (IoT) vào Y tế. DrAid™ AI, nền tảng công nghệ cốt lõi của chúng tôi, đóng vai trò quan trọng trong trong sứ mệnh này.</p>
+                    </div>
+                    <div class="">
+                        <img src="img/1.webp" alt="" class="">
+                    </div>
+
+                </div>
+                <div class="module-infor hidden items-center ">
+                    <div class=" text-white">
+                        <p class="font-bold text-3xl mb-5">Về VinBraina</p>
+                        <p class="mb-3">Tính tới năm 2023, có tới 2/3 dân số thế giới vẫn chưa được tiếp xúc đầy đủ với chẩn đoán hình ảnh. VinBrain đang nỗ lực để thay đổi điều đó với sứ mệnh rõ ràng: Cải thiện cuộc sống cho mọi người thông qua ứng dụng Trí tuệ nhân tạo (AI) và Internet vạn vật (IoT) vào Y tế. DrAid™ AI, nền tảng công nghệ cốt lõi của chúng tôi, đóng vai trò quan trọng trong trong sứ mệnh này.</p>
+                    </div>
+                    <div class="">
+                        <img src="img/1.webp" alt="" class="">
+                    </div>
+
+                </div>
+                <div class="module-infor hidden items-center ">
+                    <div class=" text-white">
+                        <p class="font-bold text-3xl mb-5">Về VinBrainaa</p>
+                        <p class="mb-3">Tính tới năm 2023, có tới 2/3 dân số thế giới vẫn chưa được tiếp xúc đầy đủ với chẩn đoán hình ảnh. VinBrain đang nỗ lực để thay đổi điều đó với sứ mệnh rõ ràng: Cải thiện cuộc sống cho mọi người thông qua ứng dụng Trí tuệ nhân tạo (AI) và Internet vạn vật (IoT) vào Y tế. DrAid™ AI, nền tảng công nghệ cốt lõi của chúng tôi, đóng vai trò quan trọng trong trong sứ mệnh này.</p>
+                    </div>
+                    <div class="">
+                        <img src="img/3.webp" alt="" class="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="think pt-6 pb-4 2xl:pt-10">
+        <div class="container m-auto">
+            <p class="flex w-fit mx-auto items-center font-semibold uppercase justify-center text-white mb-2">CHIA SẺ TỪ KHÁCH HÀNG & ĐỐI TÁC</p>
+            <h2 class="title-all text-center text-white font-medium 2xl:text-4xl xl:text-3xl sm:text-xl text-lg mb-5">Đối tác và khách hàng nghĩ gì về chúng tôi</h2>
+            <div class="flex -mx-2">
+                <div class="w-full lg:w-3/5 px-2 mb-4 lg:mb-0">
+                    <div class="box-vision relative h-full rounded-3xl overflow-hidden 2xl:p-8 xl:p-6 p-4 flex flex-col justify-between">
+                        <div class="absolute w-full h-full object-cover top-0 left-0">
+                            <img src="img/3.webp" alt="" class="">
+                        </div>
+                        <div class="title relative z-10 font-medium text-white 2xl:text-2xl lg:text-base text-xs">
+                            <p class="">Tầm nhìn của chúng tôi là mở rộng trên toàn thế giới</p>
+                        </div>
+                        <ul class="flex relative text-white">
+                            <li class="mr-4 xl:mr-10 last:mr-0">
+                                <p class="title sm:text-sm text-xs  uppercase ">Được sử dụng tại</p>
+                                <p class="">
+                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">180</span>
+                                    <strong class="unit -ml-2 mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">+</strong>
+                                    <span class="xl:text-lg">Bệnh viện</span>
+                                </p>
+                            </li>
+                            <li class="mr-4 xl:mr-10 last:mr-0">
+                                <p class="title sm:text-sm text-xs  uppercase ">Được sử dụng tại</p>
+                                <p class="">
+                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">180</span>
+                                    <strong class="unit -ml-2 mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">+</strong>
+                                    <span class="xl:text-lg">Bệnh viện</span>
+                                </p>
+                            </li>
+                            <li class="mr-4 xl:mr-10 last:mr-0">
+                                <p class="title sm:text-sm text-xs uppercase ">Được sử dụng tại</p>
+                                <p class="">
+                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">180</span>
+                                    <strong class="unit -ml-2 mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">+</strong>
+                                    <span class="xl:text-lg">Bệnh viện</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="w-full lg:w-2/5 px-2 relative">
+                    <div class=" rounded-3xl 2xl:p-6 p-4 h-full flex flex-col">
+                        <div class="flex-1 box-slide">
+                            <div class="swiper mySwiper athur w-full h-full">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide  text-white">
+                                    <div class="item">
+                                        <div class="mb-6 text-white short_content">
+                                            <p class="">
+                                                "Giải pháp Trí tuệ nhân tạo Tạo sinh DrAid™ Copilot từ VinBrain sẽ giúp cho các bác sĩ và người bệnh tiếp cận với nhau một cách nhanh chóng và chinh xác hơn."
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="avatar sm:mr-4 mr-2 shrink-0 img-full-cover sm:w-24 sm:h-24 w-16 h-16 rounded-full overflow-hidden">
+                                                <img src="img/07-08-2023-11-43-54-141454.webp" alt="" class="">
+                                            </span>
+                                            <div class="">
+                                                <p class="font-semibold text-white sm:text-[1.125rem] mb-1">PGS. TS. BS Bùi Văn Giang</p>
+                                                <p class="text-white sm:text-sm">
+                                                    Giám đốc khối Chẩn đoán hình ảnh & Điện quang can thiệp, BV Đa khoa quốc tế Vinmec
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide  text-white">
+                                    <div class="item">
+                                        <div class="mb-6 text-white short_content">
+                                            <p class="">
+                                                "Giải pháp Trí tuệ nhân tạo Tạo sinh DrAid™ Copilot từ VinBrain sẽ giúp cho các bác sĩ và người bệnh tiếp cận với nhau một cách nhanh chóng và chinh xác hơn."
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="avatar sm:mr-4 mr-2 shrink-0 img-full-cover sm:w-24 sm:h-24 w-16 h-16 rounded-full overflow-hidden">
+                                                <img src="img/07-08-2023-11-43-54-141454.webp" alt="" class="">
+                                            </span>
+                                            <div class="">
+                                                <p class="font-semibold text-white sm:text-[1.125rem] mb-1">PGS. TS. BS Bùi Văn Giang</p>
+                                                <p class="text-white sm:text-sm">
+                                                    Giám đốc khối Chẩn đoán hình ảnh & Điện quang can thiệp, BV Đa khoa quốc tế Vinmec
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide  text-white">
+                                    <div class="item">
+                                        <div class="mb-6 text-white short_content">
+                                            <p class="">
+                                                "Giải pháp Trí tuệ nhân tạo Tạo sinh DrAid™ Copilot từ VinBrain sẽ giúp cho các bác sĩ và người bệnh tiếp cận với nhau một cách nhanh chóng và chinh xác hơn."
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="avatar sm:mr-4 mr-2 shrink-0 img-full-cover sm:w-24 sm:h-24 w-16 h-16 rounded-full overflow-hidden">
+                                                <img src="img/07-08-2023-11-43-54-141454.webp" alt="" class="">
+                                            </span>
+                                            <div class="">
+                                                <p class="font-semibold text-white sm:text-[1.125rem] mb-1">PGS. TS. BS Bùi Văn Giang</p>
+                                                <p class="text-white sm:text-sm">
+                                                    Giám đốc khối Chẩn đoán hình ảnh & Điện quang can thiệp, BV Đa khoa quốc tế Vinmec
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide  text-white">
+                                    <div class="item">
+                                        <div class="mb-6 text-white short_content">
+                                            <p class="">
+                                                "Giải pháp Trí tuệ nhân tạo Tạo sinh DrAid™ Copilot từ VinBrain sẽ giúp cho các bác sĩ và người bệnh tiếp cận với nhau một cách nhanh chóng và chinh xác hơn."
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="avatar sm:mr-4 mr-2 shrink-0 img-full-cover sm:w-24 sm:h-24 w-16 h-16 rounded-full overflow-hidden">
+                                                <img src="img/07-08-2023-11-43-54-141454.webp" alt="" class="">
+                                            </span>
+                                            <div class="">
+                                                <p class="font-semibold text-white sm:text-[1.125rem] mb-1">PGS. TS. BS Bùi Văn Giang</p>
+                                                <p class="text-white sm:text-sm">
+                                                    Giám đốc khối Chẩn đoán hình ảnh & Điện quang can thiệp, BV Đa khoa quốc tế Vinmec
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide  text-white">
+                                    <div class="item">
+                                        <div class="mb-6 text-white short_content">
+                                            <p class="">
+                                                "Giải pháp Trí tuệ nhân tạo Tạo sinh DrAid™ Copilot từ VinBrain sẽ giúp cho các bác sĩ và người bệnh tiếp cận với nhau một cách nhanh chóng và chinh xác hơn."
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="avatar sm:mr-4 mr-2 shrink-0 img-full-cover sm:w-24 sm:h-24 w-16 h-16 rounded-full overflow-hidden">
+                                                <img src="img/07-08-2023-11-43-54-141454.webp" alt="" class="">
+                                            </span>
+                                            <div class="">
+                                                <p class="font-semibold text-white sm:text-[1.125rem] mb-1">PGS. TS. BS Bùi Văn Giang</p>
+                                                <p class="text-white sm:text-sm">
+                                                    Giám đốc khối Chẩn đoán hình ảnh & Điện quang can thiệp, BV Đa khoa quốc tế Vinmec
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            
+                        </div>
+                        <div class="swiper-pagination athur-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./chan.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
