@@ -3,6 +3,10 @@ var swiper = new Swiper(".mySwipers", {
       nextEl: ".button-next-dat",
       prevEl: ".button-prev-dat",
     },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
     on: {
       // Kiểm tra khi Swiper khởi tạo
       init: function () {
@@ -17,10 +21,12 @@ var swiper = new Swiper(".mySwipers", {
   function updateNavigation(swiper) {
     const nextButton = document.querySelector('.button-next-dat');
     const prevButton = document.querySelector('.button-prev-dat');
-    
+    const lazyBanner = document.querySelector('.video-lazy-banner');
     // Ẩn nút prev nếu đang ở slide đầu tiên
     if (swiper.isBeginning) {
       prevButton.style.display = 'none';
+      lazyBanner.currentTime = 0; // Đặt thời gian hiện tại của video về 0 (bắt đầu lại)
+      lazyBanner.play(); // Phát lại video    
     } else {
       prevButton.style.display = 'flex';
     }
@@ -49,10 +55,20 @@ var swiper2 = new Swiper(".athur",{
 
 var swiper3 = new Swiper(".people1-swiper", {
   spaceBetween: 20,
-  slidesPerView: 7,
+  slidesPerView: 3,
   navigation: {
     nextEl: ".people1-next",
     prevEl: ".people1-prev",
+  },
+  breakpoints: {
+    // Khi màn hình >= 640px
+    574: {
+      slidesPerView: 4, // Hiển thị 3 slide trên màn hình trung bình
+    },
+    // Khi màn hình >= 1537px
+    1024: {
+      slidesPerView: 7, // Hiển thị 4 slide trên màn hình lớn
+    },
   },
   on: {
     // Kiểm tra khi Swiper khởi tạo
@@ -86,10 +102,20 @@ function updateNavigationPeople(swiper) {
 
 var swiper4 = new Swiper(".people2-swiper", {
   spaceBetween: 20,
-  slidesPerView: 7,
+  slidesPerView: 3,
   navigation: {
     nextEl: ".people2-next",
     prevEl: ".people2-prev",
+  },
+  breakpoints: {
+    // Khi màn hình >= 640px
+    574: {
+      slidesPerView: 4, // Hiển thị 3 slide trên màn hình trung bình
+    },
+    // Khi màn hình >= 1537px
+    1024: {
+      slidesPerView: 7, // Hiển thị 4 slide trên màn hình lớn
+    },
   },
   on: {
     // Kiểm tra khi Swiper khởi tạo
@@ -124,7 +150,7 @@ function updateNavigationPeople2(swiper) {
 
 var swiper5 = new Swiper(".swiper-prize", {
   spaceBetween: 20,
-  slidesPerView: 3,
+  slidesPerView: 1.25,
   navigation: {
     nextEl: ".swiper-prize-next",
     prevEl: ".swiper-prize-prev",
@@ -132,6 +158,16 @@ var swiper5 = new Swiper(".swiper-prize", {
   pagination: {
     el: ".pagination-prize",
     clickable: true,
+  },
+  breakpoints: {
+    // Khi màn hình >= 640px
+    574: {
+      slidesPerView: 1.5, // Hiển thị 3 slide trên màn hình trung bình
+    },
+    // Khi màn hình >= 1537px
+    1024: {
+      slidesPerView: 3, // Hiển thị 4 slide trên màn hình lớn
+    },
   },
   on: {
     // Kiểm tra khi Swiper khởi tạo
@@ -165,16 +201,39 @@ function updateNavigationPrize(swiper) {
 
 var swiper6 = new Swiper(".swiper-document",{
   spaceBetween: 20,
-  slidesPerView: 4,
+  slidesPerView: 1,
   pagination: {
     el: ".swiper-pagination-document",
     clickable: true,
+  },
+  breakpoints: {
+    // Khi màn hình >= 640px
+    768: {
+      slidesPerView: 2, // Hiển thị 3 slide trên màn hình trung bình
+    },
+    // Khi màn hình >= 1537px
+    993: {
+      slidesPerView: 3, // Hiển thị 4 slide trên màn hình lớn
+    },
+    1024: {
+      slidesPerView: 4, // Hiển thị 4 slide trên màn hình lớn
+    },
   },
 })  
 
 var swiper7 = new Swiper(".swiper-news",{
   spaceBetween: 20,
-  slidesPerView: 3,
+  slidesPerView: 1.5,
+  breakpoints: {
+    // Khi màn hình >= 640px
+    768: {
+      slidesPerView: 2, // Hiển thị 3 slide trên màn hình trung bình
+    },
+    // Khi màn hình >= 1537px
+    991: {
+      slidesPerView: 3, // Hiển thị 4 slide trên màn hình lớn
+    },
+  },
 })  
 
 
@@ -237,7 +296,13 @@ if( window.innerWidth < 1280){
     })
   })
 }
-
+// click button search
+const btnSearch = document.querySelector('.btn-search');
+const formSearch = document.querySelector('.form-search-header');
+function toggleSearch(e) {
+  formSearch.classList.toggle("active");
+}
+btnSearch.addEventListener('click', toggleSearch);
 // introduce
 const IntroduceBtn = document.querySelectorAll('.module-child');
 const moduleInfor = document.querySelectorAll('.module-infor');
@@ -271,22 +336,57 @@ btnRegister.forEach(function(nameImg,X){
 
 // sản phẩm quan tâm
 const productList = document.querySelector('.current');
-const currents = document.querySelectorAll('.currents');
+const currents = document.querySelector('.currents');
+
 const listRegister = document.querySelector('.lists-register');
 const checkRegister = document.querySelectorAll('.register-check');
 const nameRegister = document.querySelectorAll(".name-register")
-const pRegister = document.querySelector(".current > .currents > p")
+const pRegister = document.querySelector(".currents p")
+var sxStrong =[];
+var numberStrong = 0;
 function showListRegister(e) {
   listRegister.classList.toggle("show");
 }
 checkRegister.forEach(function(BtnChild,X){
   BtnChild.addEventListener('click',function(e){
-    
-  if (currents[X].children.length > 0) {
-    pElement.innerHTML = '';
-    
+    const childElement = document.querySelectorAll('.currents strong');
+  if (sxStrong.includes(X)) {
+    let index = sxStrong.indexOf(X); // Tìm vị trí của phần tử 3
+
+    if (index !== -1) {
+      sxStrong.splice(index, 1); // Xóa 1 phần tử tại vị trí index
+    }
+    console.log(childElement[0]);
+    numberStrong = numberStrong - 1;
+    if(numberStrong == 0){
+      let newChild = document.createElement('p');
+      newChild.textContent = "Sản phẩm quan tâm";
+      // Thêm thẻ con vào thẻ cha
+      currents.appendChild(newChild);
+    }
+    childElement[index].remove();
+    // xóa phần tử con 
   } else {
-    pElement.innerHTML = 'Sản phẩm quan tâm';
+    sxStrong[numberStrong] = X;
+    numberStrong = numberStrong +1;
+    sxStrong.sort(function(a, b) {
+      return a - b;
+    });
+    currents.replaceChildren();
+    for(var j=0; j < sxStrong.length; j++){
+      let newChild = document.createElement('strong');
+      let dataTarget = nameRegister[sxStrong[j]].dataset.target;
+      // Thêm nội dung hoặc thuộc tính cho thẻ con
+      newChild.textContent = dataTarget.toString();
+      // Thêm thẻ con vào thẻ cha
+      currents.appendChild(newChild);
+    }
+
+  }
+  if (currents.children.length > 1) {
+    pRegister.classList.add("hidden")
+  } else {
+    pRegister.classList.remove("hidden")
   }
     nameRegister[X].classList.toggle('active');
     

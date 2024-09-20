@@ -149,23 +149,33 @@
             </div>
 
             <div class="header-icon flex items-center ml-auto">
-                <div class="header-icon-search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="header-icon-search ms-2 mr-4 ">
+                    <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <form action="" class="form-search-header flex align-items-center have-transition">
+                        <input type="text" class="" placeholder="Tìm kiếm ...">
+                        <button class="smooth btn-do-search">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
                 </div>
                 
                 <a href="" class="btn font-semibold text-white py-3 px-6 rounded-3xl border-white hover:bg-white hover:text-green-600">Liên hệ</a>
             </div>
         </div>
     </header>
-    <section class="slide-banner pt-24">
+    <section class="slide-banner">
         <div class="swiper mySwiper mySwipers">
             <div class="swiper-wrapper" style="height:fit-content;">
-                <div class="swiper-slide bg-no-repeat bg-right" style="background-image: url('img/bg-slide.jpg'); width: 1913px; margin-right: 8px;">
-                    <div class="container flex items-center h-full m-auto">
+                <div class="swiper-slide items-center css-video-banner" data-swiper-autoplay="17000">
+                    <video autoplay="" muted="" playsinline="" class=" object-cover w-full h-auto pointer-events-none video-lazy-banner" data-src="https://draid.ai/public/uploads/1tin-tuc-anh/13s-draidedit.mp4"><source src="https://draid.ai/public/uploads/1tin-tuc-anh/13s-draidedit.mp4" type="video/mp4">
+                    Your browser does not support the video tag.</video>
+              </div>
+                <div class="swiper-slide relative xl:h- bg-no-repeat h-auto bg-right" style="background-image: url('img/bg-slide.jpg'); width: 1913px; margin-right: 8px;">
+                    <div class="container flex items-center flex-wrap h-full m-auto">
                         <div class="mb-4 xl:mb-0 slide-1-1">
                             <p class="subtitle before:h-[2px] flex items-center font-semibold uppercase mb-2 2xl:text-[1rem] sm:text-sm text-xs">Tính năng mới</p>
-                            <p class="title-all text-white font-medium 2xl:text-5xl xl:text-2xl text-xl 2xl:mb-4 mb-2">Ra mắt tính năng phân loại tổn thương theo chuẩn LI-RADS trên DrAid™ CT Ung Thư Gan</p>
-                            <div class="mb-4 text-white short_content 2xl:mb-10">
+                            <p class="title-all text-white font-medium 2xl:text-5xl xl:text-2xl text-sm 2xl:mb-4 mb-2">Ra mắt tính năng phân loại tổn thương theo chuẩn LI-RADS trên DrAid™ CT Ung Thư Gan</p>
+                            <div class="mb-4 text-white short_content text-xs xl:text-base 2xl:mb-10">
                                 Nâng cao hiệu quả chẩn đoán, điều trị Ung thư gan qua công nghệ AI &nbsp
                             </div>
                             <div class="father-button relative inline-flex">
@@ -177,15 +187,68 @@
                         <div class="slide-1-2">
                             <div class="relative banner-image">
                                 <img src="img/draidweb-1.webp" alt="" class="">
+                                <div class="after">
+                                    <img src="img/draidweb-1.webp" alt="" class="">
+                                </div>
                             </div>
                         </div>
                     </div>
                   </div>
-                <div class="swiper-slide">
-                    <video autoplay="" muted="" playsinline="" class=" object-cover w-full h-auto pointer-events-none absolute video-lazy" data-src="https://draid.ai/public/uploads/1tin-tuc-anh/13s-draidedit.mp4"><source src="https://draid.ai/public/uploads/1tin-tuc-anh/13s-draidedit.mp4" type="video/mp4">
-                    Your browser does not support the video tag.</video>
-              </div>
+              <div class="swiper-slide relative xl:h-screen bg-no-repeat h-auto bg-right lazyloaded" style="background-image: url('img/bg-slide.jpg'); width: 1913px; margin-right: 8px;">
+                <div class="container flex items-center flex-wrap h-full m-auto">
+                    <div class="mb-4 basis-full xl:basis-1/2 xl:mb-0">
+                        <p class="subtitle before:h-[2px] flex items-center font-semibold uppercase mb-2 2xl:text-[1rem] sm:text-sm text-xs">sản phẩm đột phá của vinbrain</p>
+                        <p class="title-all text-white font-medium 2xl:text-5xl xl:text-2xl text-xl 2xl:mb-4 mb-2">
+                            DrAid™ cung cấp các giải pháp và dịch vụ AI tiên tiến cho ngành y tế.
+                        </p>
+                        <div class="mb-4 text-white short_content 2xl:mb-10">
+                            Trải nghiệm sức mạnh của công nghệ trí tuệ nhân tạo tiên tiến nhất trong lĩnh vực chăm sóc sức khỏe,  nâng cao chất lượng cuộc sống hàng tỉ người trên toàn thế giới
+                        </div>
+                        <div class="father-button relative inline-flex">
+                            <a href="" class=" btn-all btn"> <span class="text-button">Dùng thử ngay</span></a>
+                            <a href="" class="btn-all2 btn"><span class="text-button">Dùng thử ngay</span></a>
+                        </div>
+                        
+                    </div>
+                    <div class="basis-full xl:basis-1/2 relative">
+                        <div class="relative banner-image">
+                            <div class="img-main max-w-[585px] mx-auto img_full relative">
+                                <img src="https://draid.ai/public/uploads/demo/1170x996.png" alt="" class="">
+                                <div class="after">
+                                    <img src="https://draid.ai/public/uploads/demo/1170x996.png" alt="" class="">
+                                </div>
+                            </div>
+                            <div class="list-pro__detail">
+                                <a href="" class="pro-banner absolute py-2  px-3 font-semibold text-white inline-flex items-center border border-solid border-white rounded-2xl">
+                                    <span class="mr-2 icon shrink-0">
+                                        <img src="https://draid.ai/public/uploads/demo/icon-1_2.png" alt="" class="">
+                                    </span>
+                                    <span class="text">Tầm soát tổng thể</span>
+                                </a>
+                                <a href="" class="pro-banner absolute py-2  px-3 font-semibold text-white inline-flex items-center border border-solid border-white rounded-2xl">
+                                    <span class="mr-2 icon shrink-0">
+                                        <img src="https://draid.ai/public/uploads/demo/icon-1_2.png" alt="" class="">
+                                    </span>
+                                    <span class="text">Tầm soát tổng thể</span>
+                                </a>
+                                <a href="" class="pro-banner absolute py-2  px-3 font-semibold text-white inline-flex items-center border border-solid border-white rounded-2xl">
+                                    <span class="mr-2 icon shrink-0">
+                                        <img src="https://draid.ai/public/uploads/demo/icon-1_2.png" alt="" class="">
+                                    </span>
+                                    <span class="text">Tầm soát tổng thể</span>
+                                </a>
+                                <a href="" class="pro-banner absolute py-2  px-3 font-semibold text-white inline-flex items-center border border-solid border-white rounded-2xl">
+                                    <span class="mr-2 icon shrink-0">
+                                        <img src="https://draid.ai/public/uploads/demo/icon-1_2.png" alt="" class="">
+                                    </span>
+                                    <span class="text">Tầm soát tổng thể</span>
+                                </a>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+              </div>
 
             </div>
             <div class="swiper-button-next button-next-dat rounded-full z-20"></div>
@@ -217,7 +280,7 @@
                     </button>
 
                 </div>
-                <div class="module-infor flex items-center ">
+                <div class="module-infor flex flex-wrap items-center ">
                     <div class=" text-white">
                         <p class="font-bold text-3xl mb-5">Về VinBrainz</p>
                         <p class="mb-3">Tính tới năm 2023, có tới 2/3 dân số thế giới vẫn chưa được tiếp xúc đầy đủ với chẩn đoán hình ảnh. VinBrain đang nỗ lực để thay đổi điều đó với sứ mệnh rõ ràng: Cải thiện cuộc sống cho mọi người thông qua ứng dụng Trí tuệ nhân tạo (AI) và Internet vạn vật (IoT) vào Y tế. DrAid™ AI, nền tảng công nghệ cốt lõi của chúng tôi, đóng vai trò quan trọng trong trong sứ mệnh này.</p>
@@ -282,40 +345,40 @@
     </section>
     <section class="think pt-6 pb-4 2xl:pt-10">
         <div class="container m-auto">
-            <p class="flex w-fit mx-auto items-center font-semibold uppercase justify-center text-white mb-2">CHIA SẺ TỪ KHÁCH HÀNG & ĐỐI TÁC</p>
+            <p class="subtitle flex w-fit mx-auto items-center font-semibold uppercase justify-center mb-2">CHIA SẺ TỪ KHÁCH HÀNG & ĐỐI TÁC</p>
             <h2 class="title-all text-center text-white font-medium 2xl:text-4xl xl:text-3xl sm:text-xl text-lg mb-5">Đối tác và khách hàng nghĩ gì về chúng tôi</h2>
-            <div class="flex -mx-2">
+            <div class="flex flex-wrap -mx-2">
                 <div class="w-full lg:w-3/5 px-2 mb-4 lg:mb-0">
-                    <div class="box-vision relative h-full rounded-3xl overflow-hidden 2xl:p-8 xl:p-6 p-4 flex flex-col justify-between">
+                    <div class="box-vision relative sm:h-full rounded-xl xl:rounded-3xl overflow-hidden 2xl:p-8 xl:p-6 p-4 flex flex-col justify-between">
                         <div class="absolute w-full h-full object-cover top-0 left-0">
                             <img src="img/3.webp" alt="" class="">
                         </div>
                         <div class="title relative z-10 font-medium text-white 2xl:text-2xl lg:text-base text-xs">
                             <p class="">Tầm nhìn của chúng tôi là mở rộng trên toàn thế giới</p>
                         </div>
-                        <ul class="flex relative text-white">
+                        <ul class="flex relative text-white sm:mb-8 xl:mb-0">
                             <li class="mr-4 xl:mr-10 last:mr-0">
-                                <p class="title sm:text-sm text-xs  uppercase ">Được sử dụng tại</p>
+                                <p class="title sm:text-sm text-litte uppercase ">Được sử dụng tại</p>
                                 <p class="">
-                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">180</span>
-                                    <strong class="unit -ml-2 mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">+</strong>
-                                    <span class="xl:text-lg">Bệnh viện</span>
+                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">180</span>
+                                    <strong class="unit sm:-ml-2 sm:mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">+</strong>
+                                    <span class="xl:text-lg text-xs">Bệnh viện</span>
                                 </p>
                             </li>
                             <li class="mr-4 xl:mr-10 last:mr-0">
-                                <p class="title sm:text-sm text-xs  uppercase ">Được sử dụng tại</p>
+                                <p class="title sm:text-sm text-litte uppercase ">Được sử dụng tại</p>
                                 <p class="">
-                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">180</span>
-                                    <strong class="unit -ml-2 mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">+</strong>
-                                    <span class="xl:text-lg">Bệnh viện</span>
+                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">180</span>
+                                    <strong class="unit sm:-ml-2 sm:mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">+</strong>
+                                    <span class="xl:text-lg text-xs">Bệnh viện</span>
                                 </p>
                             </li>
                             <li class="mr-4 xl:mr-10 last:mr-0">
-                                <p class="title sm:text-sm text-xs uppercase ">Được sử dụng tại</p>
+                                <p class="title sm:text-sm text-litte uppercase ">Được sử dụng tại</p>
                                 <p class="">
-                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">180</span>
-                                    <strong class="unit -ml-2 mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-xl">+</strong>
-                                    <span class="xl:text-lg">Bệnh viện</span>
+                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">180</span>
+                                    <strong class="unit sm:-ml-2 sm:mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">+</strong>
+                                    <span class="xl:text-lg text-xs">Bệnh viện</span>
                                 </p>
                             </li>
                         </ul>
@@ -443,7 +506,7 @@
             </div>
         </div>
     </section>
-    <section class="people">
+    <section class="people overflow-hidden pt-4 pb-6  xl:pt-10 2xl:pb-20 xl:pb-10">
         <div class="container m-auto">
             <div class="module-content bg-black rounded-3xl 2xl:p-10 xl:p-6 p-4">
                 <p class="title font-medium text-white 2xl:text-xl text-lg mb-4">Đối tác nghiên cứu và phát triển</p>
@@ -606,7 +669,7 @@
 
         </div>
     </section>
-    <section class="prize">
+    <section class="prize pt-4 pb-6  overflow-hidden xl:pt-10 2xl:pb-20 xl:pb-10">
         <div class="container m-auto">
           <p class="subtitle flex w-fit justify-center mx-auto items-center font-semibold uppercase mb-2">giải thưởng</p>
           <h2 class="title-all text-center text-white font-medium 2xl:text-4xl xl:text-2xl text-xl 2xl:mb-4 mb-2">Những gì chúng tôi đã đạt được</h2>
@@ -669,12 +732,12 @@
           </div>
         </div>
       </section>
-      <section class="document">
+      <section class="document pt-4 pb-6  overflow-hidden xl:pt-10 2xl:pb-20 xl:pb-10">
         <div class="container m-auto">
             <p class="document-subtitle justify-center lg:justify-start flex items-center font-semibold text-gray-500 uppercasemb-2">Tài liệu</p>
             <div class="items-center justify-between mb-6 lg:flex 2xl:mb-10">
                 <h2 class="title-all text-center lg:text-left text-white font-medium 2xl:text-3xl xl:text-xl text-lg">Khám phá ấn phẩm của chúng tôi</h2>
-                <div class="father-button relative inline-flex">
+                <div class="father-button relative xl:inline-flex hidden">
                     <a href="" class=" btn-all btn"> <span class="text-button">Xem tất cả</span></a>
                     <a href="" class="btn-all2 btn"><span class="text-button">Xem tất cả</span></a>
                 </div>
@@ -762,11 +825,15 @@
                 </div>
                 <div class="swiper-pagination-document mt-4 pagination-all flex justify-center"></div>
               </div>
-        </div>
+              <div class="father-button relative w-full flex justify-center mt-4 xl:hidden">
+                <a href="" class=" btn-all btn"> <span class="text-button">Xem tất cả</span></a>
+                <a href="" class="btn-all2 btn"><span class="text-button">Xem tất cả</span></a>
+            </div>
+            </div>
       </section>
-      <section class="news">
+      <section class="news overflow-hidden xl:pt-10 2xl:pb-20 xl:pb-10 py-6">
         <div class="container m-auto">
-            <p class="subtitle flex w-fit mx-auto items-center font-semibold text-gray-500 uppercase mb-2">Tin tức và sự kiện</p>
+            <p class="subtitle flex w-fit mx-auto justify-center items-center font-semibold text-gray-500 uppercase mb-2">Tin tức và sự kiện</p>
             <h3 class="title-all text-center text-white font-medium 2xl:text-3xl xl:text-xl text-lg 2xl:mb-4 mb-2">Khám phá những tin tức mới nhất</h3>
             <div class="swiper-container swiper-container-pointer-events swiper-news">
                 <div class="swiper-wrapper">
@@ -777,14 +844,14 @@
                         </a>
                         <div class="content flex items-end justify-between absolute bottom-0 left-0 z-[1] 2xl:p-6 xl:p-4 p-3 text-white">
                             <div class="main-content">
-                                <span class="inline-block mb-2 font-semibold uppercase cate">news</span>
+                                <span class="inline-block mb-2 font-semibold uppercase cate text-12">news</span>
                                 <h3 class="">
-                                    <a href="" class="title font-medium 2xl:text-2xl line-clamp-2 mb-4">Vinbrain tự hào nhận chứng nhận iso</a>
+                                    <a href="" class="title font-medium 2xl:text-2xl line-clamp-2 sm:mb-4 text-12">Vinbrain tự hào nhận chứng nhận iso</a>
                                 </h3>
                                 <p class="flex flex-wrap items-center font-medium text-white time-new">
-                                    <span class="">13/08/2024</span>
+                                    <span class=" text-12">13/08/2024</span>
                                     <span class="line block w-6 h-1 bg-white mx-4"></span>
-                                    <span class="">Vinbrain</span>
+                                    <span class=" text-12">Vinbrain</span>
                                 </p>
                             </div>
                             <a href="" class="btn btn-view-more font-semibold sm:py-3 sm:px-6 py-2 px-4 shrink-0 border-white rounded-3xl mt-4">Xem chi tiết</a>
@@ -798,14 +865,14 @@
                         </a>
                         <div class="content flex items-end justify-between absolute bottom-0 left-0 z-[1] 2xl:p-6 xl:p-4 p-3 text-white mt-4">
                             <div class="main-content">
-                                <span class="inline-block mb-2 font-semibold uppercase cate">news</span>
+                                <span class="inline-block mb-2 font-semibold uppercase cate text-12">news</span>
                                 <h3 class="">
-                                    <a href="" class="title font-medium 2xl:text-2xl line-clamp-2 mb-4">Vinbrain tự hào nhận chứng nhận iso</a>
+                                    <a href="" class="title font-medium 2xl:text-2xl line-clamp-2 sm:mb-4 text-12">Vinbrain tự hào nhận chứng nhận iso</a>
                                 </h3>
                                 <p class="flex flex-wrap items-center font-medium text-white time-new">
-                                    <span class="">13/08/2024</span>
+                                    <span class=" text-12">13/08/2024</span>
                                     <span class="line block w-6 h-1 bg-white mx-4"></span>
-                                    <span class="">Vinbrain</span>
+                                    <span class=" text-12">Vinbrain</span>
                                 </p>
                             </div>
                             <a href="" class="btn btn-view-more font-semibold sm:py-3 sm:px-6 py-2 px-4 shrink-0 border-white rounded-3xl mt-4">Xem chi tiết</a>
@@ -819,14 +886,14 @@
                         </a>
                         <div class="content flex items-end justify-between absolute bottom-0 left-0 z-[1] 2xl:p-6 xl:p-4 p-3 text-white">
                             <div class="main-content">
-                                <span class="inline-block mb-2 font-semibold uppercase cate">news</span>
+                                <span class="inline-block mb-2 font-semibold uppercase text-12 cate">news</span>
                                 <h3 class="">
-                                    <a href="" class="title font-medium 2xl:text-2xl line-clamp-2 mb-4">Vinbrain tự hào nhận chứng nhận iso</a>
+                                    <a href="" class="title font-medium text-12 2xl:text-2xl line-clamp-2 sm:mb-4">Vinbrain tự hào nhận chứng nhận iso</a>
                                 </h3>
                                 <p class="flex flex-wrap items-center font-medium text-white time-new">
-                                    <span class="">13/08/2024</span>
+                                    <span class=" text-12">13/08/2024</span>
                                     <span class="line block w-6 h-1 bg-white mx-4"></span>
-                                    <span class="">Vinbrain</span>
+                                    <span class=" text-12">Vinbrain</span>
                                 </p>
                             </div>
                             <a href="" class="btn btn-view-more font-semibold sm:py-3 sm:px-6 py-2 px-4 shrink-0 border-white rounded-3xl mt-4">Xem chi tiết</a>
@@ -840,14 +907,14 @@
                         </a>
                         <div class="content flex items-end justify-between absolute bottom-0 left-0 z-[1] 2xl:p-6 xl:p-4 p-3 text-white">
                             <div class="main-content">
-                                <span class="inline-block mb-2 font-semibold uppercase cate">news</span>
+                                <span class="inline-block mb-2 font-semibold uppercase text-12 cate">news</span>
                                 <h3 class="">
-                                    <a href="" class="title font-medium 2xl:text-2xl line-clamp-2 mb-4">Vinbrain tự hào nhận chứng nhận iso</a>
+                                    <a href="" class="title font-medium 2xl:text-2xl line-clamp-2 text-12 sm:mb-4">Vinbrain tự hào nhận chứng nhận iso</a>
                                 </h3>
                                 <p class="flex flex-wrap items-center font-medium text-white time-new">
-                                    <span class="">13/08/2024</span>
+                                    <span class=" text-12">13/08/2024</span>
                                     <span class="line block w-6 h-1 bg-white mx-4"></span>
-                                    <span class="">Vinbrain</span>
+                                    <span class=" text-12">Vinbrain</span>
                                 </p>
                             </div>
                             <a href="" class="btn btn-view-more font-semibold sm:py-3 sm:px-6 py-2 px-4 shrink-0 border-white rounded-3xl mt-4">Xem chi tiết</a>
@@ -863,15 +930,15 @@
             </div>
         </div>
       </section>
-      <section class="register">
+      <section class="register overflow-hidden xl:pt-10 2xl:pb-20 xl:pb-10 pt-4 pb-6 ">
         <div class="container m-auto">
             <div class="flex flex-wrap items-center -mx-2">
-                <div class="basis-full mb-4 lg:mb-0 px-2 lg:basis-1/2">
+                <div class="basis-full mb-4 lg:mb-0 px-2 xl:basis-1/2">
                     <div class="img-form frame-youtube c-img img-full-cover rounded-3xl overflow-hidden lazy-frame-youtube">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/kcHwkQnK9io?si=zNuzfsS457lSGFBp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>        
                 </div>
-                <div class="px-2 basis-full lg:basis-1/2">
+                <div class="px-2 basis-full xl:basis-1/2">
                     <div class="wrapper-tab bg-black lg:p-4 relative z-10 rounded-xl">
                         <div class="flex gap-4 mb-4">
                             <button class="btn-register active">Gửi yêu cầu</button>
@@ -911,60 +978,159 @@
                                         <label for="" class="text-white text-sm mb-1">Sản phẩm quan tâm</label>
                                         <div class="flex flex-wrap products-list relative">
                                             <div class="current" normal="Sản phẩm quan tâm">
-                                                <div class="currents">Sản phẩm quan tâm</div>
+                                                <div class="currents">
+                                                    <p class="">Sản phẩm quan tâm</p>
+                                                </div>
                                                 <i class="fa-solid fa-angle-down"></i>
                                             </div>
                                             <div class="lists-register flex flex-col">
                                                 <label for="" class="register-check">
-                                                    <span class="name-register" name="DrAid™ X-quang Ngực">
+                                                    <span class="name-register" data-target="DrAid™ X-quang NgựcX">
                                                         DrAid™ X-quang Ngựcx    
                                                     </span>
                                                 </label>
                                                 <label for="" class="register-check">
-                                                    <span class="name-register">
+                                                    <span class="name-register" data-target="DrAid™ X-quang Ngực">
                                                         DrAid™ X-quang Ngực
                                                     </span>
                                                 </label>
                                                 <label for="" class="register-check">
-                                                    <span class="name-register">
+                                                    <span class="name-register" data-target="DrAid™ X-quang Ngực">
                                                         DrAid™ X-quang Ngực
                                                     </span>
                                                 </label>
                                                 <label for="" class="register-check">
-                                                    <span class="name-register">
+                                                    <span class="name-register" data-target="DrAid™ X-quang Ngực">
                                                         DrAid™ X-quang Ngực
                                                     </span>
                                                 </label>
                                                 <label for="" class="register-check">
-                                                    <span class="name-register">
+                                                    <span class="name-register" data-target="DrAid™ X-quang Ngực">
                                                         DrAid™ X-quang Ngực
                                                     </span>
                                                 </label>
                                                 <label for="" class="register-check">
-                                                    <span class="name-register">
+                                                    <span class="name-register" data-target="DrAid™ X-quang Ngực">
                                                         DrAid™ X-quang Ngực
                                                     </span>
                                                 </label>
                                                 <label for="" class="register-check">
-                                                    <span class="name-register">
+                                                    <span class="name-register" data-target="DrAid™ X-quang Ngực">
                                                         DrAid™ X-quang Ngực
                                                     </span>
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="w-full px-1 mb-2 form-group sm:mb-4 sm:px-2">
+                                        <label for="" class="text-white text-xs mb-1">Ghi chú</label>
+                                        <textarea name="" placeholder="Ghi chú" class="form-control-regitser resize-none w-full rounded-lg border-none outline-none text-green-500 placeholder:text-green-500"></textarea>
+                                    </div>
+                                    <div class="px-2 text-center basis-full">
+                                        <div class="father-button relative inline-flex">
+                                            <a href="" class=" btn-all btn"> <span class="text-button">Gửi</span></a>
+                                            <a href="" class="btn-all2 btn"><span class="text-button">Gửi</span></a>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
-                        <div class="tab-register"></div>
-                        <div class="tab-register"></div>
+                        <div class="tab-register">
+                            <p class="title text-white text-center font-medium 2xl:text-4xl xl:text-3xl text-xl mb-3">Đăng kí nhận thông tin</p>
+                            <p class="tab-register-p text-white text-center mx-auto mb-8" >Nhận tin tức mới nhất của chúng tôi</p>
+                            <form action="" class="">
+                                <div class="px-1 mb-2 basis-full form-group sm:mb-4 sm:px-2">
+                                    <label for="" class="text-white text-xs mb-1">Địa chỉ email</label>
+                                    <input type="text" class="form-control-regitser text-green-500 placeholder:text-green-500 w-full rounded-lg border-none outline-none ">
+                                </div>
+                                <div class="px-2 text-center basis-full">
+                                    <div class="father-button relative inline-flex">
+                                        <a href="" class=" btn-all btn"> <span class="text-button">Gửi</span></a>
+                                        <a href="" class="btn-all2 btn"><span class="text-button">Gửi</span></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-register">
+                            <div class="box-form flex flex-col justify-center items-center h-full relative bg-black xl:rounded-3xl rounded p-4 lazyloaded">
+                                <div class="mb-4 contact-item last:mb-6">
+                                    <p class="title text-white text-center font-medium 2xl:text-4xl xl:text-3xl text-xl mb-3">Đầu tư</p>
+                                    <p class="text-center text-white">Gửi email cho chúng tôi</p>
+                                </div>
+                                <div class="mb-4 contact-item last:mb-6">
+                                    <p class="mb-4 text-center text-white">info@vinbrain.net</p>
+                                    <div class="px-2 text-center w-full">
+                                        <div class="father-button relative inline-flex">
+                                            <a href="" class=" btn-all btn"> <span class="text-button">Sao chép</span></a>
+                                            <a href="" class="btn-all2 btn"><span class="text-button">Sao chép</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </div>
       </section>
-      <div class="w-96 h-96 relative"></div>
+      <footer class="footer relative 2xl:py-20 xl:py-10 py-6 bg-black pt-4">
+        <div class="container items-center xl:flex xl:m-auto">
+            <a href="" class="logo-footer block  mx-auto mb-4 xl:mb-0">
+                <img src="https://draid.ai/public/uploads/ipu/draid_2.png" alt="" class="">
+            </a>
+            <div class="flex-1 footer-content 2xl:pl-32 xl:pl-10">
+                <div class="flex flex-wrap -mx-2">
+                    <div class="px-2 mb-4 basis-1/2 lg:basis-1/2">
+                        <p class="title-footer text-emerald-600 mb-5 text-sm">Văn phòng</p>
+                        <div class="nav-footer">
+                            <ul class="">
+                                <li class="">
+                                    <a href="" class="">Văn Phòng Hà Nội - Địa chỉ Tầng 5, Tower 1, Times City, 458 Minh Khai, Hai Bà Trưng, Ha Nội, Việt Nam</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="">Văn Phòng Hồ Chí Minh - 03 Nguyễn Cơ Thạch, An Lợi Đông, Quận 2, Thủ Đức, Thành phố Hồ Chí Minh</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-2 mb-4 basis-1/2 lg:basis-1/2 lg:pl-24 footer-content2">
+                        <p class="title-footer text-emerald-600 mb-5">Về chúng tôi</p>
+                        <ul class="flex items-center mb-4 social-footer">
+                            <li class="mr-4 lg:mr-8 last:mr-0">
+                                <a href="" class="lg:text-3xl text-lg">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="mr-4 lg:mr-8 last:mr-0">
+                                <a href="" class="lg:text-3xl text-lg">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li class="mr-4 lg:mr-8 last:mr-0">
+                                <a href="" class="lg:text-3xl text-lg">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="contact text-[#888] mb-3">Email: 
+                            <a href="" class="">info@vinbrain.net</a>
+                        </p>
+                        <p class="contact text-[#888] mb-3">
+                            Hotline <a href="" class="">02871 099 455</a>
+                        </p>
+                    </div>
+                </div>
+                <span class="line block w-full h-1 bg-green-500 mt-4 mb-2"></span>
+                <div class="lg:flex justify-between text-xs text-green-500">
+                    <div class="s-content lg:max-w-[70%] text-center lg:text-left">
+                        <p class="">Giấy đăng kí chứng nhận doanh nghiệp số 0108716920 đăng kí lần đầu ngày 25 tháng 04 năm 2019 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp.</p>
+                    </div>
+                    <p class="text-center copy-right lg:text-left">Copyright © 2023 DrAid</p>
+                </div>
+            </div>
+        </div>
+      </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./chan.js"></script>
