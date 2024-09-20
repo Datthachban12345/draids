@@ -393,3 +393,15 @@ checkRegister.forEach(function(BtnChild,X){
   })
 })
 productList.addEventListener('click', showListRegister);
+
+const btnCopy = document.querySelector('.btn-copy');
+function copyTextModern(e) {
+  var textToCopy = document.querySelector('.email-name').textContent;
+  e.preventDefault();
+  navigator.clipboard.writeText(textToCopy).then(function() {
+    alert("Đã sao chép nội dung: " + textToCopy);
+  }).catch(function(err) {
+    console.error("Không thể sao chép", err);
+  });
+}
+btnCopy.addEventListener('click', copyTextModern);
