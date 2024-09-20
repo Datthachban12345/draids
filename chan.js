@@ -3,10 +3,10 @@ var swiper = new Swiper(".mySwipers", {
       nextEl: ".button-next-dat",
       prevEl: ".button-prev-dat",
     },
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     on: {
       // Kiểm tra khi Swiper khởi tạo
       init: function () {
