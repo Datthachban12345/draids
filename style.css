@@ -1,3 +1,4 @@
+
 .h-logo{
     max-width:100px;
     display:block;
@@ -55,10 +56,11 @@
     width: calc(100% - 40px);
     border: solid 1px #888;
     border-right: none;
+    padding: 12px 16px;
 }
 
 .header-icon-search .form-search-header.active {
-    top: calc(100% + 10px);
+    top: 100%;
     opacity: 1;
     visibility: unset;
     pointer-events: all;
@@ -789,15 +791,13 @@ button.module-child.active {
 .header-title li ul li a{
     padding:10px 16px;
     display:block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .header-title > li > ul > *:not(:last-child) {
-    border-bottom: 1px solid white;
+    padding-right: 23px
 }
 .header-title > li > ul > li > ul *:not(:last-child) {
-    border-bottom: 1px solid white;
-}
-.module-infor div{
-    flex-basis:50%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .item-certifi::after {
     content: "";
@@ -951,6 +951,9 @@ button.module-child.active {
     .lg:\max-w-\[70\%\]{
         max-width: 70%;
     }
+    .module-infor div{
+        flex-basis:50%;
+    }
 }
 @media screen and (max-width:767px) {
     .css-video-banner{
@@ -1042,6 +1045,12 @@ button.module-child.active {
     }
     .mySwipers {
         padding-top:1.25rem !important;
+    }
+    .publication-item .info {
+        font-size: 12px !important;
+    }
+    .app ::placeholder{
+        font-size:12px;
     }
 }
 @media screen and (max-width:414px) {
