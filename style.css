@@ -1,4 +1,14 @@
+::-webkit-scrollbar {
+    width: 6px; /* Độ rộng của thanh cuộn */
+    height:6px;
+  }    
+::-webkit-scrollbar-track {
+  background: white; /* Màu nền của track */
+}
 
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(264.07deg, #00a99c 0%, #00a99d 33.91%, #005baa 100%);
+}
 .h-logo{
     max-width:100px;
     display:block;
@@ -168,26 +178,28 @@ span.bar.x.open {
     color:#00A99D;
 }
 .subtitle::before{
-        content: "----";
-        font-size: 16px;
-        color:transparent;
-        text-decoration: line-through #A1D078;
-        margin-right: 8px;
-        
+    content:"";
+    margin-left: 0.75rem;
+    background:currentColor;
+    height:2px;
+    width:1.5rem;
+    margin-right: 8px; 
 }
 .subtitle:after{
-    content: "----";
-    font-size: 16px;
-    color:transparent;
-    text-decoration: line-through #A1D078;
-    margin-left: 8px;
+    content:"";
+    margin-left: 0.75rem;
+    background:currentColor;
+    height:2px;
+    width:1.5rem;
+    margin-right: 8px;
 }
 
 .document-subtitle:before{
-    content: "----";
-    font-size: 16px;
-    color:transparent;
-    text-decoration: line-through rgba(107,114,128);
+    content:"";
+    margin-left: 0.75rem;
+    background:currentColor;
+    height:2px;
+    width:1.5rem;
     margin-right: 8px;
 }
 .slide-1-1{
@@ -708,9 +720,96 @@ button.module-child.active {
 .footer-content{
     color:#888888;
 }
+.FadeInUp.wow{
+    animation: FadeInUp .8s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+.FadeInUp{
+    opacity:0;
+    transform: translateY(20px);
+}
+@keyframes FadeInUp{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+        visibility: hidden;
+    }
+    
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+.FadeInLeft.wow{
+    animation: FadeInLeft .8s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+}
+.FadeInLeft{
+    opacity:0;
+    transform: translateX(-20px);
+}
+@keyframes FadeInLeft{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.FadeInRight.wow{
+    animation: FadeInLeft .8s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+}
+.FadeInRight{
+    opacity:0;
+    transform: translateX(-20px);
+}
+@keyframes FadeInRight{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+    
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
 @media screen and (min-width:1024px) {
     .xl\:basis-1\/2{
         flex-basis:50%;
+    }
+}
+@media screen and (max-width:1023px) {
+    .document-subtitle:after{
+        content:"";
+        margin-left: 0.75rem;
+        background:currentColor;
+        height:2px;
+        width:1.5rem;
+        margin-right: 8px;
     }
 }
 @media screen and (min-width:1280px) {
@@ -788,10 +887,13 @@ button.module-child.active {
     padding:40px 0;
 }
 
-.header-title li ul li a{
+.header-title li ul li a {
     padding:10px 16px;
     display:block;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.header-title li ul li:last-child a {
+    border-bottom: none;
 }
 .header-title > li > ul > *:not(:last-child) {
     padding-right: 23px
@@ -925,7 +1027,7 @@ button.module-child.active {
         justify-content: center;
         top: 0;
         right: 0;
-        width: 36.5px;
+        /* width: 36.5px; */
         height: 42.5px;
     }
     .btn-header-title {

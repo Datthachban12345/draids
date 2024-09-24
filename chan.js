@@ -397,7 +397,6 @@ var Different= {
           let dataTarget = nameRegister[sxStrong[j]].dataset.target;
           // Thêm nội dung hoặc thuộc tính cho thẻ con
           newChild.textContent = dataTarget.toString();
-          // Thêm thẻ con vào thẻ cha
           currents.appendChild(newChild);
         }
     
@@ -426,6 +425,34 @@ var Different= {
     }
     btnCopy.addEventListener('click', copyTextModern);
     
+  },
+  keyframe: function(){
+    document.addEventListener("DOMContentLoaded", function() {
+      // Lấy tất cả các phần tử cần được quan sát
+      const animatedBoxUp = document.querySelectorAll('.FadeInUp');
+      const animatedBoxRi = document.querySelectorAll('.FadeInRight');
+      const animatedBoxLe = document.querySelectorAll('.FadeInLeft');
+      // Khởi tạo Intersection Observer
+      const observer = new IntersectionObserver((entries, observer) => { // biến khai báo viewpoint có xuất hiện khung hình hay không 
+        entries.forEach(entry => {
+          // Kiểm tra nếu phần tử đang nằm trong viewport
+          if (entry.isIntersecting) {
+            entry.target.classList.add('wow');  // Thêm class show để kích hoạt animation
+            observer.unobserve(entry.target);    // Ngừng quan sát phần tử này sau khi animation được kích hoạt
+          }
+        });
+      });
+      // Bắt đầu quan sát mỗi phần tử
+      animatedBoxUp.forEach(box => {
+        observer.observe(box);
+      });
+      animatedBoxLe.forEach(box => {
+        observer.observe(box);
+      });
+      animatedBoxRi.forEach(box => {
+        observer.observe(box);  //xác định viewpoint
+      });
+    });
   }
 }
 // Gọi hàm setup để khởi tạo Swiper và lắng nghe sự kiện
@@ -441,3 +468,4 @@ Different.btnSearch();
 Different.BTNregister();
 Different.ProductRegister();
 Different.CopyRegister();
+Different.keyframe();
