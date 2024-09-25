@@ -32,7 +32,7 @@
 </head>
 <body class="bg-black overflow-x-hidden">
 <div class="app ">
-    <header class="header fixed w-full z-50 py-3">
+    <header class="header fixed w-full z-50">
         <div class="container text-white flex items-center m-auto">
                 <a class="header_menu-bar text-4xl mr-5 static xl:hidden">
                   <span class="bar"></span>
@@ -350,17 +350,17 @@
             <div class="flex flex-wrap -mx-2">
                 <div class="w-full lg:w-3/5 px-2 mb-4 lg:mb-0">
                     <div class="box-vision relative sm:h-full rounded-xl xl:rounded-3xl overflow-hidden 2xl:p-8 xl:p-6 p-4 flex flex-col justify-between FadeInLeft">
-                        <div class="absolute w-full h-full object-cover top-0 left-0">
+                        <div class="absolute w-full h-full top-0 left-0">
                             <img src="img/3.webp" alt="" class="">
                         </div>
                         <div class="title relative z-10 font-medium text-white 2xl:text-2xl lg:text-base text-xs">
                             <p class="">Tầm nhìn của chúng tôi là mở rộng trên toàn thế giới</p>
                         </div>
-                        <ul class="flex relative text-white sm:mb-8 xl:mb-0">
+                        <ul class="flex relative text-white xl:mb-0">
                             <li class="mr-4 xl:mr-10 last:mr-0">
                                 <p class="title sm:text-sm text-litte uppercase ">Được sử dụng tại</p>
                                 <p class="">
-                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">180</span>
+                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-sm number-customer" data-target="1000">1000</span>
                                     <strong class="unit sm:-ml-2 sm:mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">+</strong>
                                     <span class="xl:text-lg text-xs">Bệnh viện</span>
                                 </p>
@@ -368,7 +368,7 @@
                             <li class="mr-4 xl:mr-10 last:mr-0">
                                 <p class="title sm:text-sm text-litte uppercase ">Được sử dụng tại</p>
                                 <p class="">
-                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">180</span>
+                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-sm number-customer" data-target="180">3k</span>
                                     <strong class="unit sm:-ml-2 sm:mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">+</strong>
                                     <span class="xl:text-lg text-xs">Bệnh viện</span>
                                 </p>
@@ -376,7 +376,7 @@
                             <li class="mr-4 xl:mr-10 last:mr-0">
                                 <p class="title sm:text-sm text-litte uppercase ">Được sử dụng tại</p>
                                 <p class="">
-                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">180</span>
+                                    <span class="2xl:text-6xl xl:text-4xl sm:text-3xl text-sm number-customer" data-target="180">3m9</span>
                                     <strong class="unit sm:-ml-2 sm:mr-2 2xl:text-6xl xl:text-4xl sm:text-3xl text-sm">+</strong>
                                     <span class="xl:text-lg text-xs">Bệnh viện</span>
                                 </p>
@@ -399,7 +399,7 @@
                                         </div>
                                         <div class="flex items-center">
                                             <span class="avatar sm:mr-4 mr-2 shrink-0 img-full-cover sm:w-24 sm:h-24 w-16 h-16 rounded-full overflow-hidden">
-                                                <img src="img/07-08-2023-11-43-54-141454.webp" alt="" class="">
+                                                <img src="https://draid.ai/public/uploads/india-partnership/1612893594874.jpg" alt="" class="">
                                             </span>
                                             <div class="">
                                                 <p class="font-semibold text-white sm:text-[1.125rem] mb-1">PGS. TS. BS Bùi Văn Giang</p>
@@ -508,7 +508,7 @@
     </section>
     <section class="people overflow-hidden pt-4 pb-6  xl:pt-10 2xl:pb-20 xl:pb-10">
         <div class="container m-auto">
-            <div class="module-content bg-black rounded-3xl 2xl:p-10 xl:p-6 p-4">
+            <div class="module-content bg-black rounded-3xl">
                 <p class="title font-medium text-white 2xl:text-xl text-lg mb-4 FadeInUp">Đối tác nghiên cứu và phát triển</p>
                 <div class="relative box-slide box-slide-partner">
                     <div class="swiper mySwiper people1-swiper FadeInUp">
@@ -587,7 +587,7 @@
                     </div>
                 </div>
             </div>
-            <div class="module-content bg-black rounded-3xl 2xl:p-10 xl:p-6 p-4">
+            <div class="module-content bg-black rounded-3xl">
                 <p class="title font-medium text-white 2xl:text-xl text-lg mb-4 FadeInUp">Khách hàng</p>
                 <div class="relative box-slide box-slide-partner">
                     <div class="swiper mySwiper people2-swiper FadeInUp">
@@ -618,7 +618,7 @@
                           </div>
                           <div class="swiper-slide">
                             <a href="" class="item-partner img-full-contain bg-white c-img rounded-2xl overflow-hidden mb-2">
-                                <img src="img/logo.webp" alt="" class="">
+                                <img src="https://draid.ai/public/uploads/partners/nutex-health-logo-color-blue-lined-circle-2.png" alt="" class="">
                             </a>
                             <a href="" class="block text-center text-white name">
                                 Golden Zanekka Public Co.,Ltd.
@@ -1074,6 +1074,10 @@
 
         </div>
       </section>
+      <a class="back-to-top" href="#">
+        <i class="fa-solid fa-angles-up text-xs"></i>
+        <p class="text-xs">Top</p>
+      </a>
       <footer class="footer relative 2xl:py-20 xl:py-10 py-6 bg-black pt-4">
         <div class="container items-center xl:flex xl:m-auto">
             <a href="" class="logo-footer block  mx-auto mb-4 xl:mb-0">

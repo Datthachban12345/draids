@@ -257,9 +257,7 @@ var Different= {
     let navToggle = document.querySelector('.header_menu-bar');
     let headerNavbar = document.querySelector('.menu');
     var headerOver = document.querySelector('.over-lay');
-    var navToggleActive = document.querySelector('.open');
     let bars = document.querySelectorAll('.bar');
-    var navNumber = 0;
     function toggleHamburger(e) {
       bars.forEach(bar => bar.classList.toggle('x'));
       headerNavbar.classList.toggle("active");
@@ -314,6 +312,22 @@ var Different= {
       })
     }
   },
+  introduce: function(){
+        // introduce
+        const IntroduceBtn = document.querySelectorAll('.module-child');
+        const moduleInfor = document.querySelectorAll('.module-infor');
+        IntroduceBtn.forEach(function(BtnChild,X){
+          BtnChild.addEventListener('click',function(e){
+            IntroduceBtn.forEach(a => a.classList.remove('active'));
+            BtnChild.classList.add('active');
+            moduleInfor.forEach(a => a.classList.remove('flex'));
+            moduleInfor.forEach(a => a.classList.add('hidden'));
+            moduleInfor[X].classList.add('flex');
+            moduleInfor[X].classList.remove('hidden');
+          })
+        })
+    
+  },
   btnSearch: function(){
     const btnSearch = document.querySelector('.btn-search');
     const formSearch = document.querySelector('.form-search-header');
@@ -321,20 +335,12 @@ var Different= {
       formSearch.classList.toggle("active");
     }
     btnSearch.addEventListener('click', toggleSearch);
-    // introduce
-    const IntroduceBtn = document.querySelectorAll('.module-child');
-    const moduleInfor = document.querySelectorAll('.module-infor');
-    IntroduceBtn.forEach(function(BtnChild,X){
-      BtnChild.addEventListener('click',function(e){
-        IntroduceBtn.forEach(a => a.classList.remove('active'));
-        BtnChild.classList.add('active');
-        moduleInfor.forEach(a => a.classList.remove('flex'));
-        moduleInfor.forEach(a => a.classList.add('hidden'));
-        moduleInfor[X].classList.add('flex');
-        moduleInfor[X].classList.remove('hidden');
-      })
-    })
-
+    document.addEventListener('click', function(event) {
+      // Kiểm tra nếu người dùng click ra ngoài thẻ cha
+      if (!formSearch.contains(event.target) && !btnSearch.contains(event.target)) {
+        formSearch.classList.remove("active");
+      }
+    });
   },
   BTNregister: function(){
     const btnRegister = document.querySelectorAll('.btn-register');
@@ -365,6 +371,7 @@ var Different= {
     var numberStrong = 0;
     function showListRegister(e) {
       listRegister.classList.toggle("show");
+      document.querySelector(".current > i").classList.toggle("rotate");
     }
     checkRegister.forEach(function(BtnChild,X){
       BtnChild.addEventListener('click',function(e){
@@ -375,7 +382,6 @@ var Different= {
         if (index !== -1) {
           sxStrong.splice(index, 1); // Xóa 1 phần tử tại vị trí index
         }
-        console.log(childElement[0]);
         numberStrong = numberStrong - 1;
         if(numberStrong == 0){
           let newChild = document.createElement('p');
@@ -394,7 +400,7 @@ var Different= {
         currents.replaceChildren(); //xóa hoàn toàn phần tử con
         for(var j=0; j < sxStrong.length; j++){
           let newChild = document.createElement('strong');
-          let dataTarget = nameRegister[sxStrong[j]].dataset.target;
+          let dataTarget = nameRegister[sxStrong[j]].dataset.target; //data-target đc lấy
           // Thêm nội dung hoặc thuộc tính cho thẻ con
           newChild.textContent = dataTarget.toString();
           currents.appendChild(newChild);
@@ -411,6 +417,13 @@ var Different= {
       })
     })
     productList.addEventListener('click', showListRegister);
+    document.addEventListener('click', function(event) {
+      // Kiểm tra nếu người dùng click ra ngoài thẻ cha
+      if (!productList.contains(event.target) && !listRegister.contains(event.target)) {
+        listRegister.classList.remove("show");
+        document.querySelector(".current > i").classList.remove("rotate");
+      }
+    });
   },
   CopyRegister: function(){
     const btnCopy = document.querySelector('.btn-copy');
@@ -437,7 +450,7 @@ var Different= {
         entries.forEach(entry => {
           // Kiểm tra nếu phần tử đang nằm trong viewport
           if (entry.isIntersecting) {
-            entry.target.classList.add('wow');  // Thêm class show để kích hoạt animation
+            entry.target.classList.add('wow');
             observer.unobserve(entry.target);    // Ngừng quan sát phần tử này sau khi animation được kích hoạt
           }
         });
@@ -453,19 +466,95 @@ var Different= {
         observer.observe(box);  //xác định viewpoint
       });
     });
+  },
+  numberCustomer: function(){
+    document.addEventListener("DOMContentLoaded", function() {
+      // Lấy tất cả các phần tử cần được quan sát
+      const numberRun= document.querySelectorAll('.number-customer');
+      // Khởi tạo Intersection Observer
+      const numberChild = new IntersectionObserver((entries, observer) => { // biến khai báo viewpoint có xuất hiện khung hình hay không 
+        entries.forEach(entry => {
+          // Kiểm tra nếu phần tử đang nằm trong viewport
+          if (entry.isIntersecting) {
+            
+            const updateCount = (counter, duration) => {
+              const target = counter.dataset.target;
+              const saveName = counter.innerText.toString();
+              const startValue = 0;
+              const incrementTime = 10; // thời gian giữa các bước tăng (10ms)
+              const totalSteps = duration / incrementTime;
+              const increment = (target - startValue) / totalSteps;
+          
+              let currentValue = startValue;
+              let steps = 0;
+          
+              const animate = () => {
+                  currentValue += increment;
+                  steps++;
+          
+                  if (steps < totalSteps) {
+                      counter.innerText = Math.ceil(currentValue); //làm tròn lên
+                      setTimeout(animate, incrementTime);
+                  } else {
+                      counter.innerText = saveName;
+                  }
+              };
+          
+              animate();
+          };
+            const duration = 2000; // Thời gian hoàn thành (2 giây)
+            numberRun.forEach(counter => {
+                if (!counter.classList.contains('visible')) {
+                    counter.classList.add('visible');
+                    
+                    updateCount(counter, duration);
+                }
+            });
+            observer.unobserve(entry.target);    // Ngừng quan sát phần tử này sau khi animation được kích hoạt
+          }
+        });
+      });
+      // Bắt đầu quan sát mỗi phần tử
+      numberRun.forEach(box => {
+        numberChild.observe(box);
+      });
+    });
+  },
+  backToTop: function(){
+    const btt = document.querySelector('.back-to-top'); //back-to-top
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btt.classList.add('show');
+        } else {
+          btt.classList.remove('show');
+        }
+      }
+    btt.addEventListener('click', function(event) {
+      event.preventDefault(); // Ngăn không cho liên kết dịch chuyển trang ngay lập tức
+      
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Tạo hiệu ứng cuộn mượt
+      });
+    });
   }
 }
 // Gọi hàm setup để khởi tạo Swiper và lắng nghe sự kiện
-SwiperDemo.setup();
+SwiperDemo.setup();  //phần banner
 SwiperDemo.share();
 SwiperDemo.partner();
 SwiperDemo.customer();
 SwiperDemo.prize();  
 SwiperDemo.document();
 SwiperDemo.news();
-Different.menu();
+Different.menu(); //phần header
 Different.btnSearch();
-Different.BTNregister();
-Different.ProductRegister();
-Different.CopyRegister();
-Different.keyframe();
+Different.BTNregister(); 
+Different.ProductRegister(); // sản phẩm quan tâm
+Different.CopyRegister(); //nút btn copy trong register
+Different.keyframe(); //FadeInUp,Left,Right
+Different.numberCustomer(); //Chữ số chạy trên màn hình
+Different.introduce();
+Different.backToTop();
+

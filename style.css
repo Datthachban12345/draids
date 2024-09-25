@@ -1,3 +1,4 @@
+
 ::-webkit-scrollbar {
     width: 6px; /* Độ rộng của thanh cuộn */
     height:6px;
@@ -24,6 +25,60 @@
 }
 .text-litte{
     font-size:9px;
+}
+@keyframes animateOutline {
+    0% {
+      outline-width: 1px;
+      outline-offset: 0;
+      outline-color: rgba(0, 130, 206, 0);
+    }
+  
+    10% {
+      outline-color: rgba(0, 130, 206, 0.75);
+    }
+  
+    /* The animation finishes at 50% */
+    50% {
+      outline-width: 7px;
+      outline-offset: 4px;
+      outline-color: rgba(0, 130, 206, 0);
+    }
+  
+    100% {
+      outline-width: 7px;
+      outline-offset: 4px;
+      outline-color: rgba(102, 102, 102, 0);
+    }
+  }
+.back-to-top{
+    padding-top: 2px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    position: fixed;
+    right: 15px;
+    border-radius: 5px;
+    bottom: 20px;
+    background: white;
+    z-index: 40;
+    color: black;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.back-to-top.show:hover {
+    outline-width: 1px;
+    outline-offset: 0;
+    outline-color: rgba(0, 130, 206, 0.75);
+    outline-style: solid;
+    animation: animateOutline 4s ease infinite  alternate;
+  }
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: all;
+    visibility: unset;
 }
 .swiper-container {
     margin-left: auto;
@@ -53,6 +108,10 @@
     padding: 4px 8px;
     border-radius: 5px;
 }
+.form-search-header > input{
+    color:black;
+    outline:none;
+}
 .header-icon-search .form-search-header button {
     width: 40px;
     height: 100%;
@@ -74,6 +133,8 @@
     opacity: 1;
     visibility: unset;
     pointer-events: all;
+    transform:translateY(0px);
+    transition:all 0.8s;
 }
 .header-icon-search .form-search-header {
     position: absolute;
@@ -87,6 +148,9 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transform:translateY(10px);
+    
+    transition:all 0.5s;
 }
 .register .c-img{
     padding-top:66%;
@@ -315,7 +379,7 @@ button.module-child.active {
     border-radius: 3px;
     width: 15px;
     height: 5px;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.75);
     transition: all 0.3s;
     margin: 0 2px;
     cursor:pointer;
@@ -361,6 +425,13 @@ button.module-child.active {
 }
 .swiper-button-next:after , .swiper-button-prev:after{
     font-size:16px !important;
+}
+.people .name{
+    transition:all 0.5s;
+}
+.people .name:hover{
+    color:#00A99D;
+    transition:all .5s;
 }
  .people1-next, .people1-prev{
     display: inline-flex;
@@ -420,6 +491,14 @@ button.module-child.active {
     left: 0;
     transform: translate(-50%, -50%);
 }
+.current > i{
+    transform: rotate(0deg);
+    transition:all 0.5s;
+}
+.current > i.rotate{
+    transform: rotate(180deg);
+    transition:all 0.5s;
+}
 .products-list .currents> strong {
     background: #fff;
     font-size: 0.75rem;
@@ -462,7 +541,7 @@ button.module-child.active {
     border-radius: 3px;
     width: 15px;
     height: 5px;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.75);
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     margin: 0 2px;
@@ -729,6 +808,7 @@ button.module-child.active {
     opacity:0;
     transform: translateY(20px);
 }
+
 @keyframes FadeInUp{
     0% {
         opacity: 0;
@@ -796,7 +876,13 @@ button.module-child.active {
         transform: translateX(0);
     }
 }
-
+.number-customer{
+    opacity: 0; /* Ẩn ban đầu */
+    transition: opacity 0.5s ease-out;
+}
+.number-customer.visible {
+    opacity: 1; /* Hiển thị khi nhìn thấy */
+}
 @media screen and (min-width:1024px) {
     .xl\:basis-1\/2{
         flex-basis:50%;
@@ -986,7 +1072,7 @@ button.module-child.active {
         border-radius:10px;
         width:100%;
         height:100%;
-        padding:10px 16px 10px 16px;
+        padding:10px 16px 10px 10px;
     }
     .menu{
         position: fixed;
@@ -1123,6 +1209,9 @@ button.module-child.active {
     transition: 0.3s all;
 }
 @media screen and (max-width:576px) { 
+    .box-vision > div > img{
+        transform:scale(1.3);
+    }
     .item-partner {
         border-radius: 5px !important;
     }
@@ -1163,11 +1252,6 @@ button.module-child.active {
 @media screen and (max-width:640px) {
     .box-vision{
         min-height: 200px;
-    }
-}
-@media screen and (max-width:347px) {
-    .box-vision ul{
-        margin-bottom: 10px;
     }
 }
 
