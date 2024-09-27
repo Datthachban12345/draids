@@ -16,6 +16,10 @@ var SwiperDemo = {
         delay: 5000,
         disableOnInteraction: false,
       },
+      pagination: {
+        el: ".swiper-pagination-banner",
+        clickable: true,
+      },
       on: {
         init: function () {
           SwiperDemo.updateNavigation(this);

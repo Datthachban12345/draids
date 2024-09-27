@@ -1,4 +1,9 @@
-
+.lexend-ha {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 ::-webkit-scrollbar {
     width: 6px; /* Độ rộng của thanh cuộn */
     height:6px;
@@ -6,7 +11,12 @@
 ::-webkit-scrollbar-track {
   background: white; /* Màu nền của track */
 }
-
+.scroll-div{
+    transform: translateX(-50%) !important;
+}
+.swiper-pagination-banner{
+    width:auto !important;
+}
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(264.07deg, #00a99c 0%, #00a99d 33.91%, #005baa 100%);
 }
@@ -23,8 +33,17 @@
 .basis-full{
     flex-basis:100%;
 }
+.container {
+    padding-left: 0.938rem;
+    padding-right: 0.938rem;
+}
 .text-litte{
     font-size:9px;
+}
+.scroll-div{
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    z-index:1;
 }
 @keyframes animateOutline {
     0% {
@@ -403,29 +422,43 @@ button.module-child.active {
     border:2px solid white;
     flex: 0 0 auto; 
 }
-.swiper-button-next.button-next-dat:hover{
+.button-next-dat:hover{
     background-color: white;
     color:#a1d078;
     transition: all .5s ease;
 }
 
-.swiper-button-prev.button-prev-dat:hover{
+.button-prev-dat:hover{
     background-color: white;
     color:#a1d078;
     transition: all .5s ease;
 }
-.swiper-button-next.button-next-dat,  .button-prev-dat.swiper-button-prev{
-        border: 1px solid white;    
-        width: 40px !important;
-        height: 40px !important;
-        color: white;
-        cursor: pointer;
-        display:inline-block;
-        transition: all .5s ease;
+.button-next-dat, .button-prev-dat {
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background:transparent;
+    border: 1px solid #fff;
+    z-index: 10;
 }
-.swiper-button-next:after , .swiper-button-prev:after{
+.button-next-dat {
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+.button-prev-dat {
+    left: 0;
+    transform: translate(50%, -50%);
+}
+/* .swiper-button-next:after , .swiper-button-prev:after{
     font-size:16px !important;
-}
+} */
 .people .name{
     transition:all 0.5s;
 }
@@ -1009,6 +1042,19 @@ button.module-child.active {
 .slide-banner__index .list-pro__detail .pro-banner:nth-child(2) {
     left: 57%;
 }
+.slide-banner video {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    margin: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    pointer-events: none;
+}
 }
 
 @media screen and (max-width:1279px) { 
@@ -1131,6 +1177,7 @@ button.module-child.active {
     .logo-footer{
         max-width:105px;
     }
+
 }
 @media screen and (min-width:768px) {
     .lg\:basis-1\/2{
@@ -1144,7 +1191,7 @@ button.module-child.active {
     }
 }
 @media screen and (max-width:767px) {
-    .css-video-banner{
+    .css-video-banner{  
         align-self: center;
     }
 }

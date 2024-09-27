@@ -18,6 +18,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
   <!-- Demo styles -->
   <style>
     @media screen and (max-width:1279px) { 
@@ -30,7 +33,7 @@
 
   </style>
 </head>
-<body class="bg-black overflow-x-hidden">
+<body class="bg-black overflow-x-hidden lexend-ha">
 <div class="app ">
     <header class="header fixed w-full z-50">
         <div class="container text-white flex items-center m-auto">
@@ -164,9 +167,9 @@
         </div>
     </header>
     <section class="slide-banner">
-        <div class="swiper mySwiper mySwipers">
+        <div class="mySwipers swiper-container">
             <div class="swiper-wrapper" style="height:fit-content;">
-                <div class="swiper-slide items-center css-video-banner" data-swiper-autoplay="17000">
+                <div class="swiper-slide items-center css-video-banner relative" data-swiper-autoplay="17000">
                     <video autoplay="" muted="" playsinline="" class=" object-cover w-full h-auto pointer-events-none video-lazy-banner" data-src="https://draid.ai/public/uploads/1tin-tuc-anh/13s-draidedit.mp4"><source src="https://draid.ai/public/uploads/1tin-tuc-anh/13s-draidedit.mp4" type="video/mp4">
                     Your browser does not support the video tag.</video>
               </div>
@@ -251,8 +254,19 @@
               </div>
 
             </div>
-            <div class="swiper-button-next button-next-dat rounded-full z-20"></div>
-            <div class="swiper-button-prev button-prev-dat rounded-full z-20"></div>
+            <div class="button-prev-dat rounded-full z-20">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="button-next-dat rounded-full z-20"> 
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="container scroll-div hidden xl:flex items-center justify-between absolute bottom-8 z-10 left-1/2">
+                <div class="inline-flex items-center text-white scroll-down">
+                    <img src="https://draid.ai/theme/frontend/images/scroll-down.svg" alt="" class="">
+                    <span class="ml-1">Cuộn xuống</span>
+                </div>
+                <div class="swiper-pagination-banner pagination-all"></div>
+            </div>
           </div>
     </section>
     <section class="introduce pt-10 pb-6 2xl:pt-20 2xl:pb-10">
