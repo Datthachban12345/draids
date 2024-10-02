@@ -69,7 +69,7 @@ var SwiperDemo = {
   
   partner:function(){
     var swiper3 = new Swiper(".people1-swiper", {
-      spaceBetween: 20,
+      spaceBetween: 10,
       slidesPerView: 3,
       navigation: {
         nextEl: ".people1-next",
@@ -82,6 +82,7 @@ var SwiperDemo = {
         },
         // Khi màn hình >= 1537px
         1024: {
+          spaceBetween: 20,
           slidesPerView: 7, // Hiển thị 4 slide trên màn hình lớn
         },
       },
@@ -117,7 +118,7 @@ var SwiperDemo = {
   },
   customer: function(){
     var swiper4 = new Swiper(".people2-swiper", {
-      spaceBetween: 20,
+      spaceBetween: 10,
       slidesPerView: 3,
       navigation: {
         nextEl: ".people2-next",
@@ -130,6 +131,7 @@ var SwiperDemo = {
         },
         // Khi màn hình >= 1537px
         1024: {
+          spaceBetween: 20,
           slidesPerView: 7, // Hiển thị 4 slide trên màn hình lớn
         },
       },
@@ -166,7 +168,7 @@ var SwiperDemo = {
   },
   prize: function(){
     var swiper5 = new Swiper(".swiper-prize", {
-      spaceBetween: 20,
+      spaceBetween: 10,
       slidesPerView: 1.25,
       navigation: {
         nextEl: ".swiper-prize-next",
@@ -179,10 +181,11 @@ var SwiperDemo = {
       breakpoints: {
         // Khi màn hình >= 640px
         574: {
-          slidesPerView: 1.5, // Hiển thị 3 slide trên màn hình trung bình
+          slidesPerView: 2, // Hiển thị 3 slide trên màn hình trung bình
         },
         // Khi màn hình >= 1537px
         1024: {
+          spaceBetween: 20,
           slidesPerView: 3, // Hiển thị 4 slide trên màn hình lớn
         },
       },
@@ -218,7 +221,7 @@ var SwiperDemo = {
   },
   document: function(){
     var swiper6 = new Swiper(".swiper-document",{
-        spaceBetween: 20,
+        spaceBetween: 10,
         slidesPerView: 1,
         pagination: {
           el: ".swiper-pagination-document",
@@ -542,7 +545,20 @@ var Different= {
         behavior: 'smooth' // Tạo hiệu ứng cuộn mượt
       });
     });
-  }
+  },
+  paddingBanner: function(){
+    const paddingHeader = document.querySelector('header');
+    // lần đầu chỉnh bởi vì lúc này chưa có resize
+    const nextSiblingElement = paddingHeader.nextElementSibling;
+    var height = paddingHeader.offsetHeight;
+    nextSiblingElement.style.paddingTop = height.toString() + 'px';
+
+    window.addEventListener('resize', function() {
+      // Kiểm tra và hiển thị kết quả
+        var height = paddingHeader.offsetHeight;
+        nextSiblingElement.style.paddingTop = height.toString() + 'px';
+    });
+  },
 }
 // Gọi hàm setup để khởi tạo Swiper và lắng nghe sự kiện
 SwiperDemo.setup();  //phần banner
@@ -561,4 +577,4 @@ Different.keyframe(); //FadeInUp,Left,Right
 Different.numberCustomer(); //Chữ số chạy trên màn hình
 Different.introduce();
 Different.backToTop();
-
+Different.paddingBanner();
