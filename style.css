@@ -847,7 +847,7 @@ button.module-child.active {
     transition:all .5s;
 }
 .footer-content a:hover{
-    color: #00a99d;
+    color: white;
     transition:all .5s;
 }
 .slide-banner__index .after {

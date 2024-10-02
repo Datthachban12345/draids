@@ -83,7 +83,7 @@ var SwiperDemo = {
         // Khi màn hình >= 1537px
         1024: {
           spaceBetween: 20,
-          slidesPerView: 7, // Hiển thị 4 slide trên màn hình lớn
+          slidesPerView: 8, // Hiển thị 4 slide trên màn hình lớn
         },
       },
       on: {
@@ -132,7 +132,7 @@ var SwiperDemo = {
         // Khi màn hình >= 1537px
         1024: {
           spaceBetween: 20,
-          slidesPerView: 7, // Hiển thị 4 slide trên màn hình lớn
+          slidesPerView: 8, // Hiển thị 4 slide trên màn hình lớn
         },
       },
       on: {
