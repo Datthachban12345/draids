@@ -7,7 +7,12 @@
 body{
     background:#0f2332 !important;
 }
-
+.bg-black{
+    background:rgb(29 29 29) !important;
+}
+.tracking{
+    letter-spacing: 0.235em;
+}
 ::-webkit-scrollbar {
     width: 6px; /* Độ rộng của thanh cuộn */
     height:6px;
@@ -36,6 +41,9 @@ body{
 }
 .basis-full{
     flex-basis:100%;
+}
+.max-w-1780{
+    max-width:1780px !important;
 }
 .container {
     padding-left: 0.938rem;
@@ -843,6 +851,7 @@ button.module-child.active {
 .logo-footer{
     max-width:224px;
 }
+
 .footer-content a{
     transition:all .5s;
 }
@@ -990,6 +999,19 @@ button.module-child.active {
     }  
 }
 @media screen and (min-width:1280px) {
+    footer::after {
+        content: "";
+        width: 23%;
+        height: 81%;
+        background-image: url(img/logo-hover.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: inherit;
+        pointer-events: none;
+    }
     .item-new:hover::after{
         background: rgba(0, 0, 0, 0.7);
         transition: all 0.5s;
